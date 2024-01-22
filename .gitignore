@@ -25,3 +25,20 @@ replay_pid*
 
 # Files
 /src/main/resources/application-private.properties
+
+# idea
+/.idea/
+
+# gradle
+/build.gradle
+/gradlew
+/gradlew.bat
+/settings.gradle
+/gradle/
+/.gradle/
+
+# other
+/HELP.md
+
+# output
+/build/
