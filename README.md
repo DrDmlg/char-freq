@@ -12,7 +12,7 @@
 <br />
 <div align="center">
   <a href=" ">
-    <img src="logo/todo.jpg" alt="Logo" width="500" height="500">
+    <img src="logo/logo.png" alt="Logo" width="800" height="300">
   </a>
   <h1 align="center">Character Frequency Calculator</h1>
 </div>
