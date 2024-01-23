@@ -5,7 +5,7 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SortTest {
+class SortUnitTest {
 
     @Test
     void testSortByDesc_ShouldReturnSortedMapByDesc() {

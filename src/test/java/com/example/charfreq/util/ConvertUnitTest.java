@@ -6,7 +6,7 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ConvertTest {
+class ConvertUnitTest {
 
     @Test
     void testConvertToMap_ShouldConvertLineToMap() {
