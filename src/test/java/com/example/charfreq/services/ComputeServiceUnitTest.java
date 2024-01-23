@@ -2,25 +2,32 @@ package com.example.charfreq.services;
 
 import com.example.charfreq.exception.StringEmptyException;
 import com.example.charfreq.exception.StringLengthTooLargeException;
-import org.junit.jupiter.api.BeforeEach;
+import com.example.charfreq.util.Sort;
+import com.example.charfreq.util.StringConverter;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+@ExtendWith(MockitoExtension.class)
 class ComputeServiceUnitTest {
 
-    private ComputeService service;
+    @Mock
+    private StringConverter stringConverter;
 
-    @BeforeEach
-    void init() {
-        service = new ComputeService();
-    }
+    @Mock
+    Sort sort;
+
+    @InjectMocks
+    private ComputeService computeService;
 
     @Test
     void testCompute_ShouldThrowStringEmptyException_WhenInputStringIsEmpty() {
         String expected = "Input string is empty";
 
-        var exception = assertThrows(StringEmptyException.class, () -> service.compute(null));
+        var exception = assertThrows(StringEmptyException.class, () -> computeService.compute(null));
 
         assertEquals(expected, exception.getMessage());
     }
@@ -31,7 +38,7 @@ class ComputeServiceUnitTest {
 
         String expected = "The length of the string exceeds 100 characters. The length of the entered string is: " + actual.length();
 
-        var exception = assertThrows(StringLengthTooLargeException.class, () -> service.compute(actual));
+        var exception = assertThrows(StringLengthTooLargeException.class, () -> computeService.compute(actual));
 
         assertEquals(expected, exception.getMessage());
     }
