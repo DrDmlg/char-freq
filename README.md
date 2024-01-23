@@ -88,13 +88,33 @@ Congratulations! You've successfully installed the Character Frequency Calculato
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Demonstration of a request to the endpoint to retrieve information about a task by its identifier.
+Demonstration of a request to the endpoint.
 
 <p align="center"> <img src="logo/endpoint.png" width="1000" height="30"></p>
 
 <p align="center"> <img src="logo/arrow.gif" width="50" height="50"></p>
 
 <p align="center"> <img src="logo/demo.gif" width="500" height="330"></p>
+
+<h3> WARNING! If you enter a string of more than 100 characters, you will get an error!</h3>
+
+**Example of incoming data:**
+> Sunny sundays
+
+**Example of output  data:**
+```json
+{
+    "n": 3,
+    "s": 2,
+    "u": 2,
+    "y": 2,
+    " ": 1,
+    "a": 1,
+    "S": 1,
+    "d": 1
+}
+```
+
 <hr>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
