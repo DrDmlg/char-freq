@@ -21,7 +21,6 @@ public class ComputeController {
 
     @PostMapping
     public ResponseEntity<Map<Character, Long>> compute(@RequestBody(required = false) String input) {
-        log.info("Input string: " + input );
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(computeService.compute(input));
