@@ -9,5 +9,4 @@ class CharFreqApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
