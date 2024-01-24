@@ -32,7 +32,6 @@ replay_pid*
 
 # gradle
 /build.gradle
-/settings.gradle
 /.gradle/
 
 # other
