@@ -74,11 +74,20 @@ Setting up tршы app is a simple process. Follow these steps to get your local
    ```sh
    git clone https://github.com/DrDmlg/char-freq.git
    ```
-2. Open the project in the development environment.
-   
-3. Build and run the CharFreqApplication class
-   
-4. The application is running!
+2. Navigate to the project folder:
+   ```sh
+   cd char-freq
+   ```
+3. Build the project:
+   ```sh
+   gradle build
+   ```
+4. Run the application:
+   ```sh
+   java -jar build/libs/char-freq-0.0.1.jar
+   ```
+
+6. The application is running!
 
 **The endpoints description is available at http://localhost:8080/swagger-ui.html You can test it using Postman or cURL**
 
