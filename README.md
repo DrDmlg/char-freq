@@ -68,7 +68,7 @@ Before you begin, ensure you have the following prerequisites installed on your 
 **Java Development Kit (JDK):** The application is built with Java, so make sure you have the latest JDK installed. 
 
 ### Installation
-Setting up tршы app is a simple process. Follow these steps to get your local copy up and running:
+Setting up this app is a simple process. Follow these steps to get your local copy up and running:
 
 1. Clone the repo:
    ```sh
@@ -105,25 +105,83 @@ Demonstration of a request to the endpoint.
 
 <p align="center"> <img src="logo/demo.gif" width="500" height="330"></p>
 
-<h3> WARNING! If you enter a string of more than 100 characters, you will get an error!</h3>
+## Example 1. Illustration of what happens if you enter a string ranging from 1 to 100 characters.
 
 **Example of incoming data:**
-> Sunny sundays
-
-**Example of output  data:**
 ```json
 {
-    "n": 3,
-    "s": 2,
-    "u": 2,
-    "y": 2,
-    " ": 1,
-    "a": 1,
-    "S": 1,
-    "d": 1
+    "input" : "The sun shines bright, flowers bloom."
 }
 ```
 
+**Example of output  data:**
+
+```json
+{
+    " ": 5,
+    "s": 4,
+    "e": 3,
+    "h": 3,
+    "o": 3,
+    "b": 2,
+    "i": 2,
+    "l": 2,
+    "n": 2,
+    "r": 2,
+    "f": 1,
+    "g": 1,
+    ",": 1,
+    "m": 1,
+    ".": 1,
+    "t": 1,
+    "T": 1,
+    "u": 1,
+    "w": 1
+}
+```
+## Example 2. Illustration of what happens if you enter a string exceeding 100 characters.
+
+**Example of incoming data:**
+```json
+{
+    "input" : "Explore diverse topics, cultivate new skills, and embrace continuous learning for personal and professional development."
+}
+```
+
+**Example of output  data:**
+
+```json
+{
+    "violations": [
+        {
+            "fieldName": "input",
+            "message": "The length of the input string must be at least 1 and not exceed 100 characters"
+        }
+    ]
+}
+```
+
+## Example 3. Illustration of what happens if you enter an empty string.
+
+**Example of incoming data:**
+```json
+{
+    "input" : ""
+}
+```
+
+**Example of output  data:**
+
+```json
+{
+    "violations": [
+        {
+            "fieldName": "input",
+            "message": "The input string cannot be empty or contain only spaces"
+        }
+    ]
+}
+```
 <hr>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
